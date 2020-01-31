@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
+.item{
+    border: 5px solid rgba(37, 205, 247, 0.726); 
+    margin: 0 auto;
+    width: 900px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: rgb(210, 221, 245);
+    overflow: auto;
+}
+.item img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 15px;
+    left: calc(50% - 60px);
+    border: 3px solid #5181B8;
+}
+
+.likeIcon{
+    background: url(./gamehearts.png);
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    opacity: 0.7;
+    transition: opacity 100ms ease-in-out;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    float: right;
+    margin-right: 627px;
+    margin-top: 20px;
+}
+.likeCount{
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 3px;
+    color: rgb(214, 6, 6);
+    font: 20px sans-serif;
+}
+.item > .message{
+    position: absolute;
+    /* float: right; */
+    /* margin-right: 900px; */
+    /* top: 1000px; */
+    margin-top: -47px;
+    margin-left: 90px;
+    font: 18px sans-serif;
+}

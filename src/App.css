@@ -1,0 +1,22 @@
+.app-wrapper{
+  display: grid;
+  width: 1250px;
+  min-height: 690px;
+  margin: 0 auto;
+  height: auto;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas: 
+  "H H" 
+  "N C";
+  /* grid-gap: 10px; */
+}
+
+.app-wrapper-content{
+  grid-area: C;
+  background: #B2C3E7;
+  font: 20px Georgian sans-serif;
+}
+
+
+

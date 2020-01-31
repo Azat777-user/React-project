@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
+.navigate{
+    grid-area: N;
+    background: #EDEEF0;
+    padding: 10px 0 10px 10px;
+}
+.navigate > .item >a{
+    font: 18px sans-serif; 
+    text-decoration: none;
+    color: #8A9FAA;
+    margin-left: 10px;
+    line-height: 27px;
+    text-overflow: ellipsis;
+}
+.navigate > .item > a:hover{
+    background: #B8C8E7;
+}
+.navigate > .item > a.activeLink {
+    color: rgb(33, 92, 201);
+}
+.navigate > .item > .blockFriends > a.friends{
+    margin-top: 0; 
+    font-size: 27px;
+    font-family: 'Arimo', sans-serif;
+    text-decoration: none;
+    color: #8A9FAA;
+    margin-left: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+.blockFriends{
+    display: flex;
+    margin-top: 62px;
+    align-items: сenter;
+}
+.wrapper{
+    margin-left: 10px;
+    margin-top: 39px;
+}
+.wrapper > .ava{
+    
+}
+.wrapper > .ava > a > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    left: calc(50% - 60px);
+}
+.wrapper > .name > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+
