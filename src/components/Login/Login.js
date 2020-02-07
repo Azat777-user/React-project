@@ -1,6 +1,6 @@
 import React from "react";
-import { reduxForm, Field } from "redux-form";
-import { Input } from "../common/FormsControls/FormsControls";
+import { reduxForm } from "redux-form";
+import { Input, createField } from "../common/FormsControls/FormsControls";
 import {required, maxLengthCreator} from "../../utils/validtors/validators";
 import { connect } from "react-redux";
 import { login } from "../../redux/auth-reducer";
@@ -9,36 +9,16 @@ import s from "../common/FormsControls/FormsControls.module.css";
 
 const maxLength50 = maxLengthCreator(50);
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field 
-                    placeholder={"Email"} 
-                    name={"email"} 
-                    component={Input} 
-                    validate={[required, maxLength50]}
-                />
-            </div>
-            <div>  
-                <Field 
-                    validate={[required, maxLength50]}
-                    name={"password"} 
-                    placeholder={"password"} 
-                    component={Input}
-                />
-            </div>
-            <div>
-                <Field 
-                    component={Input} 
-                    name={"rememberMe"} 
-                    type="checkbox" 
-                />Remember me
-            </div>
+        <form onSubmit={handleSubmit}>
+            {createField("Email", "email", Input, [required, maxLength50])}
+            {createField("Password", "password", Input, [required, maxLength50], {type: ""})}
+            {createField(null, "rememberMe", Input, null, {type: "checkbox"}, "Remember Me")}
             {
-                props.error &&
+                error &&
                 <div className={s.formSummarError}>
-                    {props.error}
+                    {error}
                 </div>
             }
             <div>
@@ -55,7 +35,7 @@ const LoginReduxForm = reduxForm({
 const Login = (props) => {
     const onSubmit = (formData) => {
         console.log(formData);
-       props.login(formData.email, formData.password, formData.rememberMe);
+        props.login(formData.email, formData.password, formData.rememberMe);
     }
     if(props.isAuth){
         return <Redirect to={"/profile"} />

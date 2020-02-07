@@ -16,11 +16,13 @@ import { getPageSize, getUsers, getTotalUsersCount, getCurrentPage, getIsFetchin
 class UsersContainer extends React.Component {
 
   componentDidMount(){
-    this.props.getUsers(this.props.currentPage, this.props.sizePage);
+    let {currentPage, sizePage} = this.props;
+    this.props.getUsers(currentPage, sizePage);
   }
 
   onPageChanged = (pageNumber) => {
-    this.props.getUsers(pageNumber, this.props.sizePage);
+    let {sizePage} = this.props;
+    this.props.getUsers(pageNumber, sizePage);
   }
 
   render() {
@@ -36,7 +38,6 @@ class UsersContainer extends React.Component {
           users = {this.props.users}
           unfollow = {this.props.unfollow}
           follow = {this.props.follow}  
-          toggleIsFollowingInProgress = {this.props.toggleIsFollowingInProgress}
           followingInProgress = {this.props.followingInProgress}
         />
       </>

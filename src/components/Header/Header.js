@@ -10,7 +10,7 @@ const Header = (props) => {
               <form className={s.search}>
                 <input type="search" 
                   placeholder="Поиск"  
-                  autocomplete="off" 
+                  autoComplete="off" 
                   className={s.input} 
                 />
 	              <input type="submit" value="" className={s.submit} />

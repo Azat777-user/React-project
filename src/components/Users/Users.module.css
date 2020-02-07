@@ -3,10 +3,6 @@
     width: 100px;
     height: 100px;
 }
-.selectedPage{
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace; 
-}
 .loader{
     width: 100px;
     height: 100px;
