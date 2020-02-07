@@ -12,9 +12,9 @@ import {Provider} from 'react-redux';
     name: 'andrew',
 }*/
 
-setInterval(()=>{
-    store.dispatch({type:"Fake"});
-}, 1000);
+// setInterval(()=>{
+//     store.dispatch({type:"Fake"});
+// }, 1000);
  
 ReactDOM.render(
 <BrowserRouter>
