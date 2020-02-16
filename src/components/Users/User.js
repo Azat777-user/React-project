@@ -22,18 +22,20 @@ let User = ({user, followingInProgress, unfollow, follow, key}) => {
         <div>
           {user.followed ? (
             <input
+              className={s.unFollowFollow}
               disabled={followingInProgress.some(id => id === user.id)}
               type="submit"
-              value="Unfollow"
+              value="Unsubscribe"
               onClick={() => {
                 unfollow(user.id);
               }}
             />
           ) : (
             <input
+              className={s.unFollowFollow}
               disabled={followingInProgress.some(id => id === user.id)}
               type="submit"
-              value="Follow"
+              value="Subscribe"
               onClick={() => {
                 follow(user.id);
               }}
