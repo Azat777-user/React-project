@@ -1,11 +1,8 @@
 import * as serviceWorker from './serviceWorker';
-import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import {BrowserRouter} from 'react-router-dom';
-import {Provider} from 'react-redux';
+import MainApp from "./App";
 
 /* let a = // 0x1250000
 { // 0x2550000
@@ -16,12 +13,7 @@ import {Provider} from 'react-redux';
 //     store.dispatch({type:"Fake"});
 // }, 1000);
  
-ReactDOM.render(
-<BrowserRouter>
-    <Provider store={store}>
-        <App />
-    </Provider>
-</BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<MainApp />, document.getElementById('root'));
 
 
 
