@@ -57,7 +57,7 @@
     width: 300px;
     height: auto;
     margin: 26px;
-    margin-top: -82px;
+    margin-top: -71px;
     margin-left: 126px;
     border: 3px solid rgb(18, 64, 214);
     border-radius: 15px;
@@ -81,7 +81,7 @@
     height: 30px;
     background-size: contain;
     position: absolute;
-    margin-top: -78px;
+    margin-top: -72px;
     margin-left: 97px;
 }
 .inputMessage{
@@ -100,8 +100,22 @@
     margin-left: 437px;
     margin-top: -62px;
 }
-.sendMessage button{
-    width: 107px;
-    height: 44px;
-    color: white;
+
+.sendMsg{
+    border: 1px solid rgb(30, 247, 1);
+    background-color: #1e2ddf;
+    color: #fffffe;
+    width: 113px;
+    font: bold 13px sans-serif;
+    border-radius: 5px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 37px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 32px;
+    position: absolute;
+    margin-left: 8px;
 }
