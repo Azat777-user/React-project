@@ -15,20 +15,24 @@ textarea{
 	border-right: 1px solid #DDDDDD;
 	border-bottom: 1px solid #DDDDDD;
 }
-button{
+.addPostBtn{
     border: 1px solid rgb(30, 247, 1);
-    background-color: forestgreen;
-    color: gainsboro;
+    background-color: #1e2ddf;
+    color: #fffffe;
+    width: 100px;width: 100px;
     font: bold 13px sans-serif;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     padding-left: 7px;
     padding-right: 7px;
-    height: 43px;
+    height: 40px;
     cursor: pointer;
-    margin-top: 4px;
-    margin-right: 15px;
+    margin-top: -52px;
+    margin-right: 32px;
     position: absolute;
-    margin-left: 5px;
+    margin-left: 697px;
+}
+.postContainer {
+    margin-left: 28px;
 }
