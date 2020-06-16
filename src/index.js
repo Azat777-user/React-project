@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MainApp from "./App";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 /* let a = // 0x1250000
 { // 0x2550000
