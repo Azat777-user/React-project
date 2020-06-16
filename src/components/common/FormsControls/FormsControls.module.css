@@ -3,12 +3,90 @@
     border: 1px solid red;
 }
 
+.formControl input[type="checkbox"] {
+    margin-left: 366px;
+    margin-top: 43px;
+    width: 18px;
+    height: 18px;
+}
+
+.formsControls > .formControl > input {
+    margin-top: -24px;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #E1E1E2;
+    font: 14px sans-serif;
+    padding-left: 10px;
+    margin-left: 120px;
+    position: absolute; 
+}
+
+.btnSubmit {
+    font-size: 16px;
+    width: 82px;
+    height: 30px;
+    border: 1px solid #E1E1E2;
+    background: url(../../../assets/images/grd-btn-norm.png);
+    margin-left: 301px;
+    cursor: pointer;
+}
+
+.rememberMe {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 237px;
+}
+
+.loginPageForm {
+    width: 500px;
+    min-height: auto;
+    margin: 0 auto;
+}
+
+.loginPageForm > h1 {
+    margin-left: 197px; 
+}
+
+.loginPage{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .formControl.error span  {
     color: red;
+    margin-left: -69px;
+    position: absolute;
+    margin-top: -22px;
 }
 
 .formSummarError {
     border: 1px solid red;
     padding: 5px;
     color: red;
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 98px;
+    width: auto;
+    height: auto;
+}
+
+.email {
+    margin-top: -24px;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #E1E1E2;
+    font: 14px sans-serif;
+    padding-left: 10px;
+    margin-left: 120px;
+    position: absolute; 
+}
+.password {
+    margin-top: 8px;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #E1E1E2;
+    font: 14px sans-serif;
+    padding-left: 10px;
+    margin-left: 120px;
+    position: absolute;
 }
