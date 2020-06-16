@@ -14,7 +14,7 @@ const MyPosts = React.memo((props) => {
   // ];
 
   let postsElements = props.posts.map(p=>{
-    return <Post message={p.message} likeCount={p.likesCount}/>
+    return <Post key={p.id} message={p.message} likeCount={p.likesCount}/>
   });
 
   let onAddPost = (values) => {
@@ -23,7 +23,6 @@ const MyPosts = React.memo((props) => {
 
   return (
     <div className={s.postsBlock}>
-      My Posts
       <div>
         <AddNewPostFormRedux onSubmit={onAddPost} />
       </div>
@@ -38,7 +37,6 @@ const AddNewPostForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
     <div className={s.postsBlock}>
-      My Posts
       <div className={s.postContainer}>
         <Field 
           placeholder="Write new post" 
