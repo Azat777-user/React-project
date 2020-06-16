@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import {Route, withRouter, BrowserRouter} from "react-router-dom";
+import {Route, withRouter, BrowserRouter, Switch, Redirect} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -18,8 +18,18 @@ const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsCo
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
 
 class App extends React.Component {
+
+  catchAllUnhandledErrors = (promiseRejectionEvent) => {
+
+  }
+
   componentDidMount(){
     this.props.initializeApp();
+    window.addEventListener('unhandlerejection', this.catchAllUnhandledErrors);
+  }
+
+  copmponentWillUnmount(){
+    window.removeEventListener('unhandlerejection', this.catchAllUnhandledErrors);
   }
 
   render(){
@@ -32,15 +42,18 @@ class App extends React.Component {
           <HeaderContainer />
           <Navbar />
           <div className="app-wrapper-content">
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Route path="/profile/:userId?" render={()=> {return <ProfileContainer />}} />
-              <Route path="/dialogs" render={()=>{ return <DialogsContainer />}} />
-              <Route path="/users"   render={()=><UsersContainer />}/>
-              <Route path="/music"   render={()=><Music />}/>
-              <Route path="/news"    render={()=><News />}/>
-              <Route path="/login"   render={()=><Login />}/>
-              <Route path="/settings" render={()=><Settings />} />
-            </React.Suspense> 
+            <Switch>
+              <React.Suspense fallback={<div><Preloader /></div>}>
+                <Route exact path="/" render={()=><Redirect to={'/profile'}/> } />
+                <Route path="/profile/:userId?" render={()=> {return <ProfileContainer />}} />
+                <Route path="/dialogs" render={()=>{ return <DialogsContainer />}} />
+                <Route path="/users"   render={()=><UsersContainer />}/>
+                <Route path="/music"   render={()=><Music />}/>
+                <Route path="/news"    render={()=><News />}/>
+                <Route path="/login"   render={()=><Login />}/>
+                <Route path="/settings" render={()=><Settings />} />
+              </React.Suspense> 
+            </Switch>
           </div>
         </div>
     );
