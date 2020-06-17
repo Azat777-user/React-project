@@ -1,4 +1,41 @@
-.selectedPage{
+.pageNumber.selectedPage {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace; 
+    border-color: rgb(4, 18, 174);
+    border: 3px solid #00fff3;
+}
+.paginator {
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.pageNumber {
+    padding: 2px;
+    border: 1px solid blue;
+    cursor: pointer;
+    margin: 1px;
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    font: 14px sans-serif;
+    color: rgb(18, 14, 241);
+}
+.navigationBtn {
+    font: bold 14px sans-serif;
+    text-align: center;
+    color: black;
+    background: url(../../../assets/images/nav-block-norm.png);
+    padding: 5px 0 5px 0;
+    border: 1px solid rgb(217, 217, 233);
+    width: 28px;
+    height: 25px;
+}
+.navigationBtnleft {
+    font: bold 14px sans-serif;
+    text-align: center;
+    color: black;
+    background: url(../../../assets/images/nav-block-norm.png);
+    padding: 5px 0 5px 0;
+    border: 1px solid blue;
+    width: 28px;
+    height: 25px;
 }
