@@ -1,9 +1,33 @@
-.wrapper img{
+.wrapper{
+    margin: 13px;
+    font: 16px sans-serif;
+    border-top: 1px solid white;
+}
+.wrapper img {
+    margin-top: 10px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
-.loader{
+.loader {
+    width: 82px;
+    height: 82px;
+}
+.load {
+    width: 82px;
+    height: 82px;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -17px;
+}
+.unFollowFollow {
+    border: 1px solid rgb(30, 247, 1);
+    background-color: #1e2ddf;
     width: 100px;
-    height: 100px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    height: 33px;
+    font: 13px sans-serif;
+    color: #fffffe;
 }
