@@ -115,7 +115,9 @@ export const updateStatus = (status) => {
                 dispatch(setStatus(status));
             }   
         }catch(error){
-            
+            if(error.response.status == 403) {
+                alert('Error: Server status 403');
+            }
         }
         
     }
