@@ -74,7 +74,7 @@
 
 .formControl.error span  {
     color: red;
-    margin-left: -69px;
+    margin-left: -447px;
     position: absolute;
     margin-top: -35px;
 }
@@ -88,6 +88,23 @@
     margin-left: 98px;
     width: auto;
     height: auto;
+}
+
+.captcha{
+    width: 250px;
+    height: 34px;
+    border: 1px solid #E1E1E2;
+    font: 14px sans-serif;
+    padding-left: 10px;
+    margin-left: -234px;
+    margin-top: -41px;
+    position: absolute;
+}
+
+.captchaImg{
+    width: 200px;
+    height: 150px;
+    margin-left: 270px;
 }
 
 /* .email {
