@@ -17,14 +17,14 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                         {createField("Email", "email", Input, [required, maxLength50], {className: s.email})}
                     </div>
                     <div className={s.inputForm}>
-                        {createField("Password", "password", Input, [required, maxLength50], {className: s.password, type: ""})}
+                        {createField("Password", "password", Input, [required, maxLength50], {className: s.password, type: "password"})}
                     </div>
                     <div className={s.inputForm}>
                         {createField(null, "rememberMe", Input, null, {type: "checkbox"}, "Remember me")}
                     </div>
                 
-                {captchaUrl && <img src={captchaUrl} />}
-                {captchaUrl && createField("Symbol from image", "captcha", Input, [required], {})}
+                {captchaUrl && <img className={s.captchaImg} src={captchaUrl} />}
+                {captchaUrl && createField("Symbol from image", "captcha", Input, [required], {className: s.captcha})}
                 {
                     error &&
                     <div className={s.formSummarError}>
