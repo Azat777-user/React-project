@@ -5,6 +5,7 @@ const
 
 let initialState = {
     initialized: false,
+    globalError: null
 }
 
 const appReducer = (state=initialState, action) => {
